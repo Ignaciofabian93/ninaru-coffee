@@ -1,3 +1,67 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "plugins": ["boundaries"],
+  "settings": {
+    "boundaries/include": ["./**/*"],
+    "boundaries/elements": [
+      {
+        "mode": "full",
+        "type": "shared",
+        "pattern": ["./ui/**/*", "./lib/*", "./constants/**/*"]
+      },
+      {
+        "mode": "full",
+        "type": "feature",
+        "capture": ["featureName"],
+        "pattern": ["./features/**/*"]
+      },
+      {
+        "mode": "full",
+        "type": "app",
+        "capture": ["_", "fileName"],
+        "pattern": ["./app/**/*"]
+      }
+    ]
+  },
+  "rules": {
+    "boundaries/no-unknown": [
+      "error",
+      {
+        "allowSameFile": true
+      }
+    ],
+    "boundaries/no-unknown-files": ["error"],
+    "boundaries/element-types": [
+      "error",
+      {
+        "default": "disallow",
+        "rules": [
+          {
+            "from": ["shared"],
+            "allow": ["shared"]
+          },
+          {
+            "from": ["feature"],
+            "allow": [
+              "shared",
+              ["feature", { "featureName": "${from.featureName}" }]
+            ]
+          },
+          {
+            "from": ["app"],
+            "allow": ["shared", "feature", "app"]
+          },
+          {
+            "from": ["app"],
+            "allow": [["app", { "fileName": "*.css" }]]
+          },
+          {
+            "from": ["shared"],
+            "allow": [["shared", { "fileName": "*.css" }]], // Allow shared css files
+            "message": "Allow subcomponents within the same file or directory in shared modules."
+          }
+        ]
+      }
+    ]
+  }
 }

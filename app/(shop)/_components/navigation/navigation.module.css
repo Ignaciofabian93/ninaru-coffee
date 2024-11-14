@@ -1,0 +1,32 @@
+.container {
+  background-color: var(--main);
+  width: 100vw;
+  height: fit-content;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0; */
+  backdrop-filter: blur(10px); /* Adjust blur level as needed */
+  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav {
+  width: 100%;
+  /* max-width: 1200px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 1rem; */
+}
+
+.logo {
+  width: 120px;
+}
+
+.nav_item {
+  font-family: var(--headings);
+  /* margin: 0 1rem; */
+}

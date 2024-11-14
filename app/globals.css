@@ -2,20 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --primary: rgba(78, 52, 46, 0.346);
+  --main: #cbbba0;
+  --primary-soft: rgba(78, 52, 46, 0.3);
+  --primary-gradient: linear-gradient(
+    180deg,
+    rgba(78, 52, 46, 0.8) 20%,
+    rgba(123, 90, 78, 0.6) 50%,
+    rgba(250, 248, 239, 0.4) 100%
+  );
+
+  --secondary: #d7ccc8;
+  --accent: #3e2723;
+  --background: #faf8ef;
+  --highlights: #a1887f;
+
+  --foreground: #1f1f1f;
+
+  --headings: "PlayFair Display";
+  --text: "Lato";
+  --accents: "Pacifico";
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  font-family: var(--text);
+}
+
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.986rem;
+}
+
+h2 {
+  font-size: 2.488rem;
+}
+
+h3 {
+  font-size: 2.074rem;
+}
+
+h4 {
+  font-size: 1.728rem;
+}
+
+h5 {
+  font-size: 1.44rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+small {
+  font-size: 0.833rem;
 }

@@ -1,0 +1,22 @@
+{
+  "es": {
+    "home": {
+      "logo": "Ninaru",
+      "home": "Inicio",
+      "coffee": "Cafetería",
+      "boutique": "Boutique",
+      "jewelry": "Joyería",
+      "textile": "Textil"
+    }
+  },
+  "en": {
+    "home": {
+      "logo": "Ninaru",
+      "home": "Home",
+      "coffee": "Coffee",
+      "boutique": "Boutique",
+      "jewelry": "Jewelry",
+      "textile": "Textile"
+    }
+  }
+}
