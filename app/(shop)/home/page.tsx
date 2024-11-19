@@ -4,8 +4,7 @@ import PageLayout from "../_components/layout";
 export default function HomePage() {
   return (
     <PageLayout>
-      {/* <Hero /> */}
-      jasajs
+      <Hero />
     </PageLayout>
   );
 }

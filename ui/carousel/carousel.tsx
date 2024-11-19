@@ -1,7 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import styles from "./carousel.module.css";
-import CaretLeftIcon from "@/constants/icons/caretleft";
-import CaretRightIcon from "@/constants/icons/caretright";
+import { CaretLeftIcon, CaretRightIcon } from "@/constants/icons";
 
 export function Carousel({ children }: { children: React.ReactNode }) {
   return <section className={`${styles["container"]}`}>{children}</section>;

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./footer.module.css";
-import { logo } from "@/constants/images";
+import { logo, logo_bg_black } from "@/constants/images";
 import InstagramIcon from "@/constants/icons/instagram";
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="w-[30%]"></div>
         <div className="w-[30%] flex items-center justify-center">
           <div className="w-[300px] h-auto">
-            <Image src={logo} alt="" width={2478} height={1524} className="w-full h-full" />
+            <Image src={logo_bg_black} alt="" width={2478} height={1524} className="w-full h-full" />
           </div>
         </div>
         <div className="w-[30%] flex items-center justify-center">

@@ -32,6 +32,9 @@
 
   --foreground: #1f1f1f;
 
+  --black: #000;
+  --white: #fff;
+
   --headings: "PlayFair Display";
   --text: "Lato";
   --accents: "Pacifico";
@@ -44,7 +47,7 @@
 
 body {
   color: var(--foreground);
-  background: #fff;
+  background: var(--white);
   font-family: var(--text);
 }
 

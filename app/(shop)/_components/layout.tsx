@@ -4,10 +4,10 @@ import Footer from "./footer/footer";
 
 export default function PageLayout({ children }: { children: ReactNode }) {
   return (
-    <main className="w-screen h-screen no-scrollbar">
+    <main className="w-screen min-h-screen no-scrollbar overflow-hidden">
       <Navigation />
-      <section className="w-full h-full">{children}</section>
-      {/* <Footer /> */}
+      <section className="mt-[1rem] w-full h-full flex flex-col justify-between">{children}</section>
+      <Footer />
     </main>
   );
 }
